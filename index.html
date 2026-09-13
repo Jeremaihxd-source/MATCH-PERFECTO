@@ -517,7 +517,7 @@
 
             /* ---- WhatsApp Contact ---- */
             // 👉 AQUÍ SOLO CAMBIA EL NÚMERO (código de país sin signos ni espacios, ej: 51987654321)
-            var WHATSAPP_NUMERO = '51999999999'; // 👈 Pon tu número aquí
+            var WHATSAPP_NUMERO = '51984425231'; // 👈 Pon tu número aquí
             var WHATSAPP_MENSAJE = '¡Hola! Quisiera más información sobre el evento Match Perfecto 🎯';
 
             function contactarWhatsApp() {
@@ -575,8 +575,48 @@
                 update();
                 setInterval(update, 1000);
             })();
+
+            /* ---- Aviso de descuento primera visita ---- */
+            (function initMerchNotice() {
+                var STORAGE_KEY = 'match_merch_notice_dismissed';
+                try {
+                    if (!localStorage.getItem(STORAGE_KEY)) {
+                        var noticeEl = document.getElementById('merchNotice');
+                        var closeBtn = document.getElementById('merchNoticeClose');
+                        if (noticeEl && closeBtn) {
+                            setTimeout(function () {
+                                noticeEl.classList.add('merch-notice--visible');
+                            }, 800);
+
+                            closeBtn.addEventListener('click', function (e) {
+                                e.stopPropagation();
+                                noticeEl.classList.remove('merch-notice--visible');
+                                try {
+                                    localStorage.setItem(STORAGE_KEY, 'true');
+                                } catch (err) { }
+                            });
+                        }
+                    }
+                } catch (e) { }
+            })();
         })();
     </script>
+
+    <!-- Aviso de bienvenida (Descuento Merch) -->
+    <aside class="merch-notice" id="merchNotice" role="alert" aria-live="polite">
+        <div class="merch-notice-icon" aria-hidden="true">🎁</div>
+        <div class="merch-notice-content">
+            <span class="merch-notice-badge">Beneficio Exclusivo</span>
+            <p class="merch-notice-text">Gana 10% de descuento en una prenda del Merch por tu registro</p>
+        </div>
+        <button type="button" class="merch-notice-close" id="merchNoticeClose" aria-label="Cerrar aviso">
+            <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2.5" fill="none"
+                stroke-linecap="round" stroke-linejoin="round">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+        </button>
+    </aside>
 </body>
 
 </html>

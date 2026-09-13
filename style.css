@@ -11,11 +11,15 @@
 :root {
     --hero-max-width: min(860px, 90vw);
     --hero-aspect: 1296 / 837;
-    --ink: #2E1712;
-    --brick: #A6321F;
-    --gold: #C08A52;
-    --paper: rgba(251, 244, 232, 0.72);
-    --line: rgba(46, 23, 18, 0.18);
+    --navy: #17283C;
+    --rose: #CC746F;
+    --rose-dark: #B55F5A;
+    --cream: #E4D3C1;
+    --ink: #17283C;
+    --brick: #CC746F;
+    --gold: #CC746F;
+    --paper: rgba(228, 211, 193, 0.82);
+    --line: rgba(23, 40, 60, 0.18);
     /* Tipografías: Outfit (sin serifa), Italianno (manuscrita) */
     font-family: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     color: var(--ink);
@@ -107,17 +111,22 @@ ul {
 
 a {
     text-decoration: none;
-    color: #4a152199;
+    color: var(--ink);
     font-family: 'Outfit', sans-serif;
     font-size: 1.2rem;
     font-weight: bold;
 }
 
 li {
-    border: 1px solid #000;
+    border: 1px solid rgba(23, 40, 60, 0.2);
     padding: 10px 20px;
     border-radius: 50px;
-    background-color: #e2bc9b;
+    background-color: var(--cream);
+    transition: transform 0.25s ease, background-color 0.25s ease;
+}
+
+li:hover {
+    transform: translateY(-2px);
 }
 
 nav:hover {
@@ -125,14 +134,20 @@ nav:hover {
 }
 
 button {
-    background-color: transparent;
-    border: 1px solid #000;
+    background-color: var(--brick);
+    border: 1px solid rgba(23, 40, 60, 0.15);
     padding: 10px 20px;
     border-radius: 50px;
     font-size: 1.2rem;
     font-family: 'Outfit', sans-serif;
     font-weight: bold;
-    background-color: #c83e34;
+    color: #FFF8EF;
+    cursor: pointer;
+    transition: background-color 0.25s ease, transform 0.25s ease;
+}
+
+button:hover {
+    background-color: var(--rose-dark);
 }
 
 /* ---- Hamburger Button ---- */
@@ -297,14 +312,14 @@ button {
     background: var(--brick);
     color: #FFF8EF;
     border: 2px solid var(--brick);
-    box-shadow: 0 8px 28px rgba(166, 50, 31, 0.35);
+    box-shadow: 0 8px 28px rgba(204, 116, 111, 0.4);
 }
 
 .hero-btn--primary:hover {
-    background: #8F291B;
-    border-color: #8F291B;
+    background: var(--rose-dark);
+    border-color: var(--rose-dark);
     transform: translateY(-3px);
-    box-shadow: 0 14px 38px rgba(166, 50, 31, 0.45);
+    box-shadow: 0 14px 38px rgba(204, 116, 111, 0.5);
 }
 
 .hero-btn--secondary {
@@ -395,7 +410,7 @@ button {
         justify-content: flex-start;
         padding: 5rem 1.8rem 2rem;
         gap: 1.5rem;
-        background: linear-gradient(165deg, #3b1510 0%, #1e0b09 100%);
+        background: linear-gradient(165deg, #17283C 0%, #0d1723 100%);
         transform: translateX(100%);
         transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         z-index: 150;
@@ -510,7 +525,7 @@ button {
    =================================================== */
 .section-2,
 .section-4 {
-    background-color: #E6BF9E;
+    background-color: var(--cream);
     width: 100%;
     min-height: 70vh;
     display: flex;
@@ -718,7 +733,7 @@ button {
 
     border-radius: 999px;
 
-    background: rgba(166, 50, 31, 0.88);
+    background: rgba(204, 116, 111, 0.9);
 
     border: 1px solid rgba(255, 255, 255, 0.28);
 
@@ -732,7 +747,7 @@ button {
     text-transform: uppercase;
 
     box-shadow:
-        0 8px 25px rgba(46, 23, 18, 0.12);
+        0 8px 25px rgba(23, 40, 60, 0.12);
 
     margin-bottom: 1.2rem;
 }
@@ -769,7 +784,7 @@ button {
 
     max-width: 700px;
 
-    color: rgba(46, 23, 18, 0.78);
+    color: rgba(23, 40, 60, 0.78);
 
     font-family: 'Outfit', sans-serif;
 
@@ -817,9 +832,9 @@ button {
 
     /* Cristal cálido */
 
-    background: rgba(251, 244, 232, 0.72);
+    background: rgba(228, 211, 193, 0.82);
 
-    border: 1px solid rgba(192, 138, 82, 0.55);
+    border: 1px solid rgba(204, 116, 111, 0.35);
 
     border-radius: 18px;
 
@@ -827,7 +842,7 @@ button {
     -webkit-backdrop-filter: blur(8px);
 
     box-shadow:
-        0 15px 40px rgba(46, 23, 18, 0.12),
+        0 15px 40px rgba(23, 40, 60, 0.12),
         inset 0 1px 0 rgba(255, 255, 255, 0.5);
 
     transition:
@@ -857,10 +872,10 @@ button {
 .event-card:hover {
     transform: translateY(-10px) rotate(0deg);
 
-    background: rgba(251, 244, 232, 0.84);
+    background: rgba(228, 211, 193, 0.92);
 
     box-shadow:
-        0 25px 55px rgba(46, 23, 18, 0.18),
+        0 25px 55px rgba(23, 40, 60, 0.18),
         inset 0 1px 0 rgba(255, 255, 255, 0.65);
 }
 
@@ -884,7 +899,7 @@ button {
     background: var(--brick);
 
     box-shadow:
-        0 8px 18px rgba(166, 50, 31, 0.25);
+        0 8px 18px rgba(204, 116, 111, 0.3);
 }
 
 
@@ -896,7 +911,7 @@ button {
 
     fill: none;
 
-    stroke: #F8DFAE;
+    stroke: #FFF8EF;
 
     stroke-width: 1.8;
 
@@ -959,7 +974,7 @@ button {
 .event-small {
     margin: 0.55rem 0 0;
 
-    color: rgba(46, 23, 18, 0.65);
+    color: rgba(23, 40, 60, 0.68);
 
     font-family: 'Outfit', sans-serif;
 
@@ -1025,7 +1040,7 @@ button {
 
     margin: 0.7rem auto 1.2rem;
 
-    color: rgba(46, 23, 18, 0.68);
+    color: rgba(23, 40, 60, 0.68);
 
     font-family: 'Outfit', sans-serif;
 
@@ -1062,9 +1077,9 @@ button {
 
     padding: 2.5rem;
 
-    background: rgba(255, 252, 247, 0.88);
+    background: rgba(255, 255, 255, 0.9);
 
-    border: 1px solid rgba(255, 255, 255, 0.75);
+    border: 1px solid rgba(228, 211, 193, 0.9);
 
     border-radius: 22px;
 
@@ -1072,7 +1087,7 @@ button {
     -webkit-backdrop-filter: blur(14px);
 
     box-shadow:
-        0 25px 70px rgba(46, 23, 18, 0.18),
+        0 25px 70px rgba(23, 40, 60, 0.16),
         inset 0 1px 0 rgba(255, 255, 255, 0.8);
 }
 
@@ -1095,7 +1110,7 @@ button {
 
     margin-bottom: 0.5rem;
 
-    color: rgba(46, 23, 18, 0.8);
+    color: rgba(23, 40, 60, 0.82);
 
     font-family: 'Outfit', sans-serif;
 
@@ -1126,13 +1141,13 @@ button {
 
     padding: 0 14px;
 
-    border: 1px solid rgba(46, 23, 18, 0.16);
+    border: 1px solid rgba(23, 40, 60, 0.18);
 
     border-radius: 11px;
 
     outline: none;
 
-    background: rgba(255, 255, 255, 0.75);
+    background: rgba(255, 255, 255, 0.85);
 
     color: var(--ink);
 
@@ -1149,7 +1164,7 @@ button {
 
 .form-group input::placeholder {
 
-    color: rgba(46, 23, 18, 0.35);
+    color: rgba(23, 40, 60, 0.38);
 }
 
 
@@ -1161,7 +1176,7 @@ button {
     background: #fff;
 
     box-shadow:
-        0 0 0 3px rgba(166, 50, 31, 0.10);
+        0 0 0 3px rgba(204, 116, 111, 0.15);
 }
 
 
@@ -1198,17 +1213,18 @@ button {
     display: flex;
 
     align-items: center;
+
     justify-content: center;
 
-    border: 1px solid rgba(46, 23, 18, 0.16);
+    border: 1px solid rgba(23, 40, 60, 0.18);
 
     border-right: none;
 
     border-radius: 11px 0 0 11px;
 
-    background: rgba(244, 238, 229, 0.85);
+    background: rgba(228, 211, 193, 0.45);
 
-    color: rgba(46, 23, 18, 0.6);
+    color: rgba(23, 40, 60, 0.7);
 
     font-family: 'Outfit', sans-serif;
 
@@ -1250,11 +1266,11 @@ button {
 
     padding: 0.75rem 0.9rem;
 
-    border: 1.5px solid rgba(46, 23, 18, 0.13);
+    border: 1.5px solid rgba(23, 40, 60, 0.15);
 
     border-radius: 11px;
 
-    background: rgba(255, 255, 255, 0.72);
+    background: rgba(255, 255, 255, 0.75);
 
     cursor: pointer;
 
@@ -1269,7 +1285,7 @@ button {
 
     transform: translateY(-2px);
 
-    border-color: rgba(166, 50, 31, 0.4);
+    border-color: rgba(204, 116, 111, 0.45);
 }
 
 
@@ -1294,7 +1310,7 @@ button {
 
     flex-shrink: 0;
 
-    border: 2px solid rgba(46, 23, 18, 0.3);
+    border: 2px solid rgba(23, 40, 60, 0.35);
 
     border-radius: 4px;
 
@@ -1310,10 +1326,10 @@ button {
 
     border-color: var(--brick);
 
-    background: rgba(166, 50, 31, 0.055);
+    background: rgba(204, 116, 111, 0.08);
 
     box-shadow:
-        0 4px 14px rgba(166, 50, 31, 0.08);
+        0 4px 14px rgba(204, 116, 111, 0.12);
 }
 
 
@@ -1369,7 +1385,7 @@ button {
 
 .day-info small {
 
-    color: rgba(46, 23, 18, 0.55);
+    color: rgba(23, 40, 60, 0.58);
 
     font-family: 'Outfit', sans-serif;
 
@@ -1387,9 +1403,9 @@ button {
 
     border-radius: 5px;
 
-    background: rgba(192, 138, 82, 0.13);
+    background: rgba(204, 116, 111, 0.15);
 
-    color: rgba(46, 23, 18, 0.7);
+    color: var(--ink);
 
     font-family: 'Outfit', sans-serif;
 
@@ -1431,7 +1447,7 @@ button {
 
     transform: translateY(-50%);
 
-    color: rgba(46, 23, 18, 0.55);
+    color: rgba(23, 40, 60, 0.55);
 
     font-size: 1rem;
 
@@ -1470,7 +1486,7 @@ button {
     cursor: pointer;
 
     box-shadow:
-        0 8px 20px rgba(166, 50, 31, 0.22);
+        0 8px 20px rgba(204, 116, 111, 0.3);
 
     transition:
         transform 0.25s ease,
@@ -1491,10 +1507,10 @@ button {
 
     transform: translateY(-2px);
 
-    background: #8F291B;
+    background: var(--rose-dark);
 
     box-shadow:
-        0 12px 25px rgba(166, 50, 31, 0.3);
+        0 12px 25px rgba(204, 116, 111, 0.4);
 }
 
 
@@ -1773,7 +1789,7 @@ button {
 ========================================================= */
 .countdown-section {
     width: 100%;
-    background-color: #9F8C76;
+    background-color: var(--navy);
     padding: 4rem 2rem;
     text-align: center;
 }
@@ -1842,7 +1858,7 @@ button {
 ========================================================= */
 .site-footer {
     width: 100%;
-    background-color: #6B5D4F;
+    background-color: #0F1C2B;
     padding: 3.5rem 2rem 2.5rem;
     text-align: center;
 }
@@ -2005,8 +2021,8 @@ button {
 
 .event-card--interactive:hover {
     transform: translateY(-8px);
-    border-color: rgba(166, 50, 31, 0.5);
-    box-shadow: 0 16px 40px rgba(166, 50, 31, 0.15);
+    border-color: rgba(204, 116, 111, 0.6);
+    box-shadow: 0 16px 40px rgba(23, 40, 60, 0.16);
 }
 
 .event-card-action {
@@ -2015,8 +2031,8 @@ button {
     gap: 0.4rem;
     margin-top: 1.2rem;
     padding: 0.45rem 1rem;
-    background: rgba(166, 50, 31, 0.1);
-    border: 1px solid rgba(166, 50, 31, 0.28);
+    background: rgba(204, 116, 111, 0.12);
+    border: 1px solid rgba(204, 116, 111, 0.35);
     border-radius: 999px;
     color: var(--brick);
     font-size: 0.84rem;
@@ -2028,7 +2044,7 @@ button {
 .event-card:hover .event-card-action {
     background: var(--brick);
     color: #FFF8EF;
-    box-shadow: 0 4px 14px rgba(166, 50, 31, 0.3);
+    box-shadow: 0 4px 14px rgba(204, 116, 111, 0.35);
     transform: translateX(3px);
 }
 
@@ -2095,7 +2111,7 @@ button {
     justify-content: center;
     padding: 0.55rem 1.4rem;
     border-radius: 999px;
-    background: rgba(166, 50, 31, 0.88);
+    background: rgba(204, 116, 111, 0.9);
     border: 1px solid rgba(255, 255, 255, 0.28);
     color: #FFF8EF;
     font-family: 'Outfit', sans-serif;
@@ -2103,7 +2119,7 @@ button {
     font-weight: 600;
     letter-spacing: 0.08em;
     text-transform: uppercase;
-    box-shadow: 0 8px 25px rgba(46, 23, 18, 0.12);
+    box-shadow: 0 8px 25px rgba(23, 40, 60, 0.12);
     margin-bottom: 1.2rem;
 }
 
@@ -2121,7 +2137,7 @@ button {
 .ubicacion-subtitle {
     margin: 1.2rem auto 0;
     max-width: 600px;
-    color: rgba(46, 23, 18, 0.78);
+    color: rgba(23, 40, 60, 0.78);
     font-family: 'Outfit', sans-serif;
     font-size: clamp(1rem, 1.5vw, 1.2rem);
     font-weight: 400;
@@ -2143,9 +2159,9 @@ button {
     height: 500px;
     border-radius: 22px;
     overflow: hidden;
-    border: 1px solid rgba(192, 138, 82, 0.4);
+    border: 1px solid rgba(204, 116, 111, 0.35);
     box-shadow:
-        0 25px 70px rgba(46, 23, 18, 0.18),
+        0 25px 70px rgba(23, 40, 60, 0.18),
         inset 0 1px 0 rgba(255, 255, 255, 0.5);
 }
 
@@ -2158,7 +2174,7 @@ button {
 /* Detalles */
 .ubicacion-details-section {
     width: 100%;
-    background-color: #E6BF9E;
+    background-color: var(--cream);
     padding: 4rem 2rem;
 }
 
@@ -2175,15 +2191,15 @@ button {
 }
 
 .ubicacion-info-card {
-    background: rgba(251, 244, 232, 0.72);
-    border: 1px solid rgba(192, 138, 82, 0.55);
+    background: rgba(255, 255, 255, 0.85);
+    border: 1px solid rgba(204, 116, 111, 0.3);
     border-radius: 18px;
     padding: 2rem 1.5rem;
     text-align: center;
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
     box-shadow:
-        0 15px 40px rgba(46, 23, 18, 0.12),
+        0 15px 40px rgba(23, 40, 60, 0.12),
         inset 0 1px 0 rgba(255, 255, 255, 0.5);
     transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
@@ -2191,7 +2207,7 @@ button {
 .ubicacion-info-card:hover {
     transform: translateY(-6px);
     box-shadow:
-        0 25px 55px rgba(46, 23, 18, 0.18),
+        0 25px 55px rgba(23, 40, 60, 0.18),
         inset 0 1px 0 rgba(255, 255, 255, 0.65);
 }
 
@@ -2204,14 +2220,14 @@ button {
     justify-content: center;
     margin: 0 auto 1rem;
     background: var(--brick);
-    box-shadow: 0 8px 18px rgba(166, 50, 31, 0.25);
+    box-shadow: 0 8px 18px rgba(204, 116, 111, 0.3);
 }
 
 .ubicacion-info-icon svg {
     width: 26px;
     height: 26px;
     fill: none;
-    stroke: #F8DFAE;
+    stroke: #FFF8EF;
     stroke-width: 1.8;
     stroke-linecap: round;
     stroke-linejoin: round;
@@ -2230,7 +2246,7 @@ button {
     font-weight: 400;
     font-size: 0.95rem;
     line-height: 1.5;
-    color: rgba(46, 23, 18, 0.7);
+    color: rgba(23, 40, 60, 0.7);
     margin: 0;
 }
 
@@ -2256,14 +2272,14 @@ button {
     font-weight: 700;
     text-decoration: none;
     letter-spacing: 0.02em;
-    box-shadow: 0 8px 20px rgba(166, 50, 31, 0.22);
+    box-shadow: 0 8px 20px rgba(204, 116, 111, 0.3);
     transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
 }
 
 .ubicacion-maps-btn:hover {
     transform: translateY(-3px);
-    background: #8F291B;
-    box-shadow: 0 14px 30px rgba(166, 50, 31, 0.35);
+    background: var(--rose-dark);
+    box-shadow: 0 14px 30px rgba(204, 116, 111, 0.4);
 }
 
 .ubicacion-register-btn {
@@ -2272,8 +2288,8 @@ button {
     gap: 0.4rem;
     padding: 1rem 2.2rem;
     border-radius: 12px;
-    background: rgba(46, 23, 18, 0.08);
-    border: 2px solid rgba(46, 23, 18, 0.2);
+    background: rgba(23, 40, 60, 0.08);
+    border: 2px solid rgba(23, 40, 60, 0.2);
     color: var(--ink);
     font-family: 'Outfit', sans-serif;
     font-size: 1rem;
@@ -2285,8 +2301,8 @@ button {
 
 .ubicacion-register-btn:hover {
     transform: translateY(-3px);
-    background: rgba(46, 23, 18, 0.14);
-    box-shadow: 0 12px 25px rgba(46, 23, 18, 0.12);
+    background: rgba(23, 40, 60, 0.14);
+    box-shadow: 0 12px 25px rgba(23, 40, 60, 0.12);
 }
 
 /* Responsive ubicación */
@@ -2389,8 +2405,8 @@ button {
     gap: 0.45rem;
     padding: 0.6rem 1.25rem;
     border-radius: 999px;
-    background: rgba(255, 255, 255, 0.35);
-    border: 1px solid rgba(192, 138, 82, 0.5);
+    background: rgba(255, 255, 255, 0.6);
+    border: 1px solid rgba(23, 40, 60, 0.15);
     color: var(--ink);
     font-family: 'Outfit', sans-serif;
     font-size: 0.88rem;
@@ -2401,9 +2417,9 @@ button {
 }
 
 .ubicacion-action-pill:hover {
-    background: rgba(255, 255, 255, 0.65);
+    background: #fff;
     transform: translateY(-2px);
-    box-shadow: 0 8px 18px rgba(46, 23, 18, 0.12);
+    box-shadow: 0 8px 18px rgba(23, 40, 60, 0.12);
 }
 
 .nav-link--active {
@@ -2420,13 +2436,13 @@ button {
     align-items: center;
     justify-content: space-between;
     padding: 0.75rem 1.25rem;
-    background: rgba(46, 23, 18, 0.9);
+    background: rgba(23, 40, 60, 0.94);
     color: #FFF8EF;
     font-family: 'Outfit', sans-serif;
     font-size: 0.88rem;
     font-weight: 600;
     backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(192, 138, 82, 0.35);
+    border-bottom: 1px solid rgba(204, 116, 111, 0.35);
 }
 
 .ubicacion-map-title {
@@ -2457,4 +2473,123 @@ button {
     border-radius: 50%;
     background: #4ade80;
     box-shadow: 0 0 8px #4ade80;
+}
+
+/* =========================================================
+   AVISO FLOTANTE (MERCH DESCUENTO - PRIMERA VISITA)
+========================================================= */
+.merch-notice {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    z-index: 9999;
+    max-width: 380px;
+    background: #17283C;
+    border: 1.5px solid rgba(204, 116, 111, 0.55);
+    border-radius: 16px;
+    padding: 0.95rem 1.15rem;
+    box-shadow: 0 16px 36px rgba(23, 40, 60, 0.45), 0 0 0 1px rgba(228, 211, 193, 0.15);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    display: flex;
+    align-items: flex-start;
+    gap: 0.85rem;
+    transform: translateY(130%);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.45s ease;
+}
+
+.merch-notice--visible {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.merch-notice-icon {
+    flex-shrink: 0;
+    width: 36px;
+    height: 36px;
+    background: #CC746F;
+    color: #FFF8EF;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.15rem;
+    box-shadow: 0 4px 12px rgba(204, 116, 111, 0.4);
+}
+
+.merch-notice-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.merch-notice-badge {
+    display: inline-block;
+    background: rgba(204, 116, 111, 0.22);
+    color: #CC746F;
+    border: 1px solid rgba(204, 116, 111, 0.45);
+    font-size: 0.68rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 0.18rem 0.5rem;
+    border-radius: 6px;
+    margin-bottom: 0.35rem;
+}
+
+.merch-notice-text {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.88rem;
+    line-height: 1.38;
+    font-weight: 600;
+    color: #E4D3C1;
+    margin: 0;
+}
+
+.merch-notice-close {
+    flex-shrink: 0;
+    background: transparent !important;
+    border: none !important;
+    padding: 4px !important;
+    width: 28px !important;
+    height: 28px !important;
+    border-radius: 6px !important;
+    color: rgba(228, 211, 193, 0.65) !important;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.2s, background-color 0.2s, transform 0.2s;
+    line-height: 1;
+    box-shadow: none !important;
+}
+
+.merch-notice-close:hover {
+    color: #FFF8EF !important;
+    background: rgba(255, 255, 255, 0.12) !important;
+    transform: scale(1.1);
+}
+
+@media (max-width: 480px) {
+    .merch-notice {
+        bottom: 16px;
+        left: 14px;
+        right: 14px;
+        max-width: calc(100% - 28px);
+        padding: 0.85rem 0.95rem;
+        border-radius: 14px;
+    }
+
+    .merch-notice-icon {
+        width: 32px;
+        height: 32px;
+        font-size: 1rem;
+    }
+
+    .merch-notice-text {
+        font-size: 0.82rem;
+        line-height: 1.32;
+    }
 }
